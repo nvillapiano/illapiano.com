@@ -2,16 +2,16 @@
 
 <!--
 
-               
 
- ___   ___      ___      _______          
-|   | |   |    |   |    |   _   |         
-|   | |   |    |   |    |  |_|  |         
-|   | |   |    |   |    |       |         
-|   | |   |___ |   |___ |       |         
-|   | |       ||       ||   _   |         
-|___| |_______||_______||__| |__|         
- _______  ___   _______  __    _  _______ 
+
+ ___   ___      ___      _______
+|   | |   |    |   |    |   _   |
+|   | |   |    |   |    |  |_|  |
+|   | |   |    |   |    |       |
+|   | |   |___ |   |___ |       |
+|   | |       ||       ||   _   |
+|___| |_______||_______||__| |__|
+ _______  ___   _______  __    _  _______
 |       ||   | |   _   ||  |  | ||       |
 |    _  ||   | |  |_|  ||   |_| ||   _   |
 |   |_| ||   | |       ||       ||  | |  |
@@ -19,9 +19,9 @@
 |   |    |   | |   _   || | |   ||       |
 |___|    |___| |__| |__||_|  |__||_______|
 
-                             
+
 Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
-                                                  twitter: @nvillapiano 
+                                                  twitter: @nvillapiano
 
 -->
 
@@ -38,11 +38,11 @@ Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" href="style.css">
+<!-- 	<link rel="stylesheet" href="reset.css"> -->
+	<link rel="stylesheet" href="css/index.css">
 
     <link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
-	
+
     <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
