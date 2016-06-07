@@ -1,0 +1,733 @@
+// _styles.scss
+
+@charset "UTF-8";
+
+/* site styles
+================================================== */
+
+body {
+	background: #fffffa;
+}
+
+.circles {
+	width: 560px;
+	height: 560px;
+/*	position: relative;
+*/	background: #fffffa;
+	margin: 0 auto;
+	/*margin-bottom: 20px;*/
+	/*margin-top: 3%;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform 0.5s;
+}
+
+.circles div {
+	height: 99%;
+	width: 99%;
+	position: relative;
+	top: .7%;
+	left: .7%;
+	border-radius: 50%;
+	border: 1px solid rgba(42, 192, 240, 0.2);
+}
+
+/*.circles:hover {
+	transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari only override */
+    ::i-block-chrome,.circles div {
+    	height: 98.8%;
+    	width: 98.8%;
+		top: 1.2%;
+		left: 1.2%;
+    }
+}
+
+.work {
+	position: fixed;
+	right: 10%;
+	top: 10%;
+	height: 90px;
+	overflow-y: hidden;
+	transition: all .3s;
+	/**/
+	display: none;
+}
+
+.work:hover {
+	cursor: pointer;
+	height: 250px;
+	transition: opacity .3s;
+}
+
+.work:hover .links a {
+	opacity: 1;
+	transition: all .3s;
+}
+
+.title {
+	width: 180px;
+	margin-bottom: 30px;
+}
+
+.title div {
+	background: rgba(42, 192, 240, 0.5);
+	width: 10px;
+	height: 10px;
+	float: left;
+	position: absolute;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+.title:hover div {
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+.title:hover + .links a {
+	opacity: 1.0;
+}
+
+.links {
+	margin-top: 80px;
+}
+
+.links a, .links a:visited {
+	display: block;
+	font-family: "Jura", sans-serif;
+	color: #aaa;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: 1.6rem;
+	opacity: 0;
+	transition: all .3s;
+}
+
+.links a:hover, .links a:active {
+	color: #333;
+}
+
+/* positioning */
+
+.title div:nth-of-type(1) {
+	left: 40px
+}
+
+
+.title div:nth-of-type(2) {
+	left: 50px;
+}
+
+.title div:nth-of-type(3) {
+	top: 10px;
+	left: 30px;
+}
+
+.title div:nth-of-type(4) {
+	top: 10px;
+	left: 40px;
+}
+
+.title div:nth-of-type(5) {
+	top: 10px;
+	left: 50px;
+}
+
+.title div:nth-of-type(6) {
+	top: 10px;
+	left: 60px;
+}
+
+.title div:nth-of-type(7) {
+	top: 20px;
+	left: 20px;
+}
+
+.title div:nth-of-type(8) {
+	top: 20px;
+	left: 30px;
+}
+
+.title div:nth-of-type(9) {
+	top: 20px;
+	left: 40px;
+}
+
+.title div:nth-of-type(10) {
+	top: 20px;
+	left: 50px;
+}
+
+.title div:nth-of-type(11) {
+	top: 20px;
+	left: 60px;
+}
+
+.title div:nth-of-type(12) {
+	top: 20px;
+	left: 70px;
+}
+
+.title div:nth-of-type(13) {
+	top: 30px;
+	left: 10px;
+}
+
+.title div:nth-of-type(14) {
+	top: 30px;
+	left: 20px;
+}
+
+.title div:nth-of-type(15) {
+	top: 30px;
+	left: 30px;
+}
+
+.title div:nth-of-type(16) {
+	top: 30px;
+	left: 40px;
+}
+
+.title div:nth-of-type(17) {
+	top: 30px;
+	left: 50px;
+}
+
+.title div:nth-of-type(18) {
+	top: 30px;
+	left: 60px;
+}
+
+.title div:nth-of-type(19) {
+	top: 30px;
+	left: 70px;
+}
+
+.title div:nth-of-type(20) {
+	top: 30px;
+	left: 80px;
+}
+
+.title div:nth-of-type(21) {
+	top: 40px;
+	left: 0;
+}
+
+.title div:nth-of-type(22) {
+	top: 40px;
+	left: 10px;
+}
+
+.title div:nth-of-type(23) {
+	top: 40px;
+	left: 20px;
+}
+
+.title div:nth-of-type(24) {
+	top: 40px;
+	left: 30px;
+}
+
+.title div:nth-of-type(25) {
+	top: 40px;
+	left: 40px;
+}
+
+.title div:nth-of-type(26) {
+	top: 40px;
+	left: 50px;
+}
+
+.title div:nth-of-type(27) {
+	top: 40px;
+	left: 60px;
+}
+
+.title div:nth-of-type(28) {
+	top: 40px;
+	left: 70px;
+}
+
+.title div:nth-of-type(29) {
+	top: 40px;
+	left: 80px;
+}
+
+.title div:nth-of-type(30) {
+	top: 40px;
+	left: 90px;
+}
+
+.title div:nth-of-type(31) {
+	top: 50px;
+	left: 10px;
+}
+
+.title div:nth-of-type(32) {
+	top: 50px;
+	left: 20px;
+}
+
+.title div:nth-of-type(33) {
+	top: 50px;
+	left: 30px;
+}
+
+.title div:nth-of-type(34) {
+	top: 50px;
+	left: 40px;
+}
+
+.title div:nth-of-type(35) {
+	top: 50px;
+	left: 50px;
+}
+
+.title div:nth-of-type(36) {
+	top: 50px;
+	left: 60px;
+}
+
+.title div:nth-of-type(37) {
+	top: 50px;
+	left: 70px;
+}
+
+.title div:nth-of-type(38) {
+	top: 50px;
+	left: 80px;
+}
+
+.title div:nth-of-type(39) {
+	top: 60px;
+	left: 20px;
+}
+
+.title div:nth-of-type(40) {
+	top: 60px;
+	left: 30px;
+}
+
+.title div:nth-of-type(41) {
+	top: 60px;
+	left: 40px;
+}
+
+.title div:nth-of-type(42) {
+	top: 60px;
+	left: 50px;
+}
+
+.title div:nth-of-type(43) {
+	top: 60px;
+	left: 60px;
+}
+
+.title div:nth-of-type(44) {
+	top: 60px;
+	left: 70px;
+}
+
+.title div:nth-of-type(45) {
+	top: 70px;
+	left: 30px;
+}
+
+.title div:nth-of-type(46) {
+	top: 70px;
+	left: 40px;
+}
+
+.title div:nth-of-type(47) {
+	top: 70px;
+	left: 50px;
+}
+
+.title div:nth-of-type(48) {
+	top: 70px;
+	left: 60px;
+}
+
+.title div:nth-of-type(49) {
+	top: 80px;
+	left: 40px;
+}
+
+.title div:nth-of-type(50) {
+	top: 80px;
+	left: 50px;
+}
+
+
+.title div:nth-of-type(51) {
+	opacity: 0;
+}
+
+.title div:nth-of-type(52) {
+	opacity: 0;
+}
+
+.title div:nth-of-type(53) {
+	opacity: 0;
+}
+
+.title div:nth-of-type(54) {
+	opacity: 0;
+}
+
+
+/* hover state */
+
+.work:hover div:nth-of-type(2) {
+	left: 0;
+	top: 10px;
+}
+
+.work:hover div:nth-of-type(3) {
+	top: 20px;
+	left: 0;
+}
+
+.work:hover div:nth-of-type(4) {
+	top: 30px;
+	left: 10px;
+}
+
+.work:hover div:nth-of-type(5) {
+	top: 20px;
+	left: 20px;
+}
+
+.work:hover div:nth-of-type(6) {
+	top: 30px;
+	left: 30px;
+}
+
+.work:hover div:nth-of-type(7) {
+	top: 20px;
+	left: 40px;
+}
+
+.work:hover div:nth-of-type(8) {
+	top: 10px;
+	left: 40px;
+}
+
+.work:hover div:nth-of-type(9) {
+	top: 0;
+	left: 0;
+}
+
+.work:hover div:nth-of-type(10) {
+	top: 0;
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(11) {
+	top: 10px;
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(12) {
+	top: 20px;
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(13) {
+	top: 30px;
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(13) {
+	top: 30px;
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(14) {
+	top: 30px;
+	left: 70px;
+}
+
+.work:hover div:nth-of-type(15) {
+	top: 30px;
+	left: 80px;
+}
+
+.work:hover div:nth-of-type(16) {
+	top: 20px;
+	left: 80px;
+}
+
+.work:hover div:nth-of-type(17) {
+	top: 10px;
+	left: 80px;
+}
+
+.work:hover div:nth-of-type(18) {
+	top: 0;
+	left: 80px;
+}
+
+.work:hover div:nth-of-type(19) {
+	top: 0;
+	left: 70px;
+}
+
+.work:hover div:nth-of-type(20) {
+	top: 0;
+	left: 100px;
+}
+
+.work:hover div:nth-of-type(21) {
+	top: 10px;
+	left: 100px;
+}
+
+.work:hover div:nth-of-type(22) {
+	top: 20px;
+	left: 100px;
+}
+
+.work:hover div:nth-of-type(23) {
+	top: 30px;
+	left: 100px;
+}
+
+.work:hover div:nth-of-type(24) {
+	top: 0;
+	left: 110px;
+}
+
+.work:hover div:nth-of-type(25) {
+	top: 10px;
+	left: 120px;
+}
+
+.work:hover div:nth-of-type(26) {
+	top: 20px;
+	left: 110px;
+}
+
+.work:hover div:nth-of-type(27) {
+	top: 30px;
+	left: 120px;
+}
+
+.work:hover div:nth-of-type(28) {
+	top: 0;
+	left: 140px;
+}
+
+.work:hover div:nth-of-type(29) {
+	top: 10px;
+	left: 140px;
+}
+
+.work:hover div:nth-of-type(30) {
+	top: 20px;
+	left: 140px;
+}
+
+.work:hover div:nth-of-type(31) {
+	top: 30px;
+	left: 140px;
+}
+
+.work:hover div:nth-of-type(32) {
+	top: 0;
+	left: 160px;
+}
+
+.work:hover div:nth-of-type(33) {
+	top: 10px;
+	left: 150px;
+}
+
+.work:hover div:nth-of-type(34) {
+	top: 20px;
+	left: 150px;
+}
+
+.work:hover div:nth-of-type(35) {
+	top: 30px;
+	left: 160px;
+}
+
+.work:hover div:nth-of-type(36) {
+	left: 0;
+	top: 50px;
+	opacity: 0;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+
+.work:hover div:nth-of-type(37), .work:hover div:nth-of-type(38), .work:hover div:nth-of-type(39),
+.work:hover div:nth-of-type(40), .work:hover div:nth-of-type(41), .work:hover div:nth-of-type(42),
+.work:hover div:nth-of-type(43), .work:hover div:nth-of-type(44), .work:hover div:nth-of-type(45),
+.work:hover div:nth-of-type(46), .work:hover div:nth-of-type(47), .work:hover div:nth-of-type(48),
+.work:hover div:nth-of-type(49), .work:hover div:nth-of-type(50), .work:hover div:nth-of-type(51),
+.work:hover div:nth-of-type(52), .work:hover div:nth-of-type(53) {
+	top: 50px;
+}
+
+.work:hover div:nth-of-type(38) {
+	left: 10px;
+}
+
+.work:hover div:nth-of-type(39) {
+	left: 20px;
+}
+
+.work:hover div:nth-of-type(40) {
+	left: 30px;
+}
+
+.work:hover div:nth-of-type(41) {
+	left: 40px;
+}
+
+.work:hover div:nth-of-type(42) {
+	left: 50px;
+}
+
+.work:hover div:nth-of-type(43) {
+	left: 60px;
+}
+
+.work:hover div:nth-of-type(44) {
+	left: 0;
+}
+
+.work:hover div:nth-of-type(45) {
+	left: 80px;
+}
+
+.work:hover div:nth-of-type(46) {
+	left: 90px;
+}
+
+.work:hover div:nth-of-type(47) {
+	left: 100px;
+}
+
+.work:hover div:nth-of-type(48) {
+	left: 110px;
+}
+
+.work:hover div:nth-of-type(49) {
+	left: 120px;
+}
+
+.work:hover div:nth-of-type(50) {
+	left: 130px;
+}
+
+.work:hover div:nth-of-type(51) {
+	left: 140px;
+	opacity: 1;
+}
+
+.work:hover div:nth-of-type(52) {
+	left: 150px;
+	opacity: 1;
+}
+
+.work:hover div:nth-of-type(53) {
+	left: 160px;
+	opacity: 1;
+}
+
+.work:hover div:nth-of-type(54) {
+	opacity: 0;
+	-webkit-transition: all .1s;
+	transition: all .1s;
+}
+
+
+
+
+
+/* media queries
+================================================== */
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 960px) and (max-width: 1160px) {
+		.work {
+			right: 5%;
+		}
+	}
+
+
+	@media only screen and (min-width: 0) and (max-width: 960px) {
+		.work {
+			right: 0;
+			top: initial;
+			left: 10%;
+			bottom: 0;
+			height: 250px;
+		}
+
+		.circles {
+			width: 400px;
+			height: 400px;
+		}
+
+		.circles div {
+			top: .6%;
+			left: .6%;
+		}
+
+		::i-block-chrome, .circles div {
+			height: 99%;
+			width: 99%;
+			top: 1%;
+			left: 1%;
+		}
+
+
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		.circles {
+			width: 300px;
+			height: 300px;
+		}
+
+		.circles div {
+			top: 0.5%;
+			left: 0.45%;
+		}
+
+		.work {
+			top: 360px;
+			width: 55%;
+		}
+
+		::i-block-chrome, .circles div {
+			height: 99%;
+			width: 99%;
+			top: 1%;
+			left: 1%;
+		}
+
+	}
+
+
+/* font-face
+================================================== */
+
+
