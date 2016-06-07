@@ -2,8 +2,7 @@
 
 <!--
 
-
-
+nickv@
  ___   ___      ___      _______
 |   | |   |    |   |    |   _   |
 |   | |   |    |   |    |  |_|  |
@@ -19,16 +18,11 @@
 |   |    |   | |   _   || | |   ||       |
 |___|    |___| |__| |__||_|  |__||_______|
 
-
-Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
-                                                  twitter: @nvillapiano
+.com
 
 -->
 
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 
 	<meta charset="utf-8">
@@ -38,14 +32,9 @@ Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- 	<link rel="stylesheet" href="reset.css"> -->
 	<link rel="stylesheet" href="css/index.css">
 
     <link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
-
-    <!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -59,6 +48,7 @@ Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
 
 
 <div class="circles">
+    <!-- pretty sure there are 69 of these -->
     <div>
         <div>
             <div>
@@ -125,7 +115,9 @@ Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
                                                                                                                                                                                                                                                                  <div>
                                                                                                                                                                                                                                                                      <div>
                                                                                                                                                                                                                                                                          <div>
-                                                                                                                                                                                                                                                                             <div></div>
+                                                                                                                                                                                                                                                                             <div class="last">
+                                                                                                                                                                                                                                                                                 <?php include 'about.php'; ?>
+                                                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                                                          </div>
                                                                                                                                                                                                                                                                      </div>
                                                                                                                                                                                                                                                                  </div>
@@ -194,79 +186,8 @@ Want to collaborate on a project? Drop me a line  email: nickv@illapiano.com
     </div>
 </div>
 
-<section class="work">
-    <div class="title">
-        <!-- 1 -->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <!-- row 3 -->
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-    </div>
-    <div class="links">
-        <a href="http://www.smithmade.org">Smith</a>
-        <a href="http://www.themonkroom.com">The Monk Room</a>
-        <a href="http://www.pascalandsabine.com">Pascal &amp; Sabine</a>
-        <a href="http://windowshaveeyes.com/">Windows Have Eyes</a>
-        <a href="http://www.retromedia.net">Retromedia</a>
-    </div>
-</section>
-
 <!-- jquery -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-
 
 </body>
 </html>

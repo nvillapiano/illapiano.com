@@ -112,20 +112,18 @@ input, select {
   vertical-align: middle;
 }
 
-/* site styles
-================================================== */
-/* line 8, ../scss/_style.scss */
+/* line 5, ../scss/_style.scss */
 html {
   font-size: 62.5%;
 }
 
-/* line 12, ../scss/_style.scss */
+/* line 9, ../scss/_style.scss */
 body {
   background: #fffffa;
   font-size: 62.5%;
 }
 
-/* line 17, ../scss/_style.scss */
+/* line 14, ../scss/_style.scss */
 .circles {
   width: 56rem;
   height: 56rem;
@@ -135,27 +133,62 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  transition: transform 0.5s;
+  transition: all 0.1s;
 }
-
-/* line 29, ../scss/_style.scss */
+/* line 25, ../scss/_style.scss */
 .circles div {
   height: 99%;
   width: 99%;
   position: relative;
-  top: .7%;
-  left: .7%;
+  transform: translateX(1.4%) translateY(1.4%);
   border-radius: 50%;
   border: 0.1rem solid rgba(42, 192, 240, 0.2);
+  transition: all 0.3s;
 }
-
-/*.circles:hover {
-	transform: translateX(-50%) translateY(-50%) scale(0.9);
+/* line 38, ../scss/_style.scss */
+.circles .about {
+  border: none;
+  opacity: 0;
+  font-size: 2rem;
+  transition: opacity 0.3s;
 }
-*/
+/* line 44, ../scss/_style.scss */
+.circles .about .macro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  height: auto;
+  border: none;
+}
+/* line 57, ../scss/_style.scss */
+.circles:hover div {
+  transform: translateX(0.7%) translateY(0.7%);
+}
+/* line 63, ../scss/_style.scss */
+.circles:hover .about {
+  opacity: 1;
+}
+@keyframes dance {
+  0% {
+    transform: translateX(0.7%) translateY(0.5%);
+  }
+  25% {
+    transform: translateX(0.75%) translateY(0.3%);
+  }
+  50% {
+    transform: translateX(0%) translateY(-0.1%);
+  }
+  75% {
+    transform: translateX(-0.1%) translateY(0.6%);
+  }
+  100% {
+    transform: translateX(0.7%) translateY(0.5%);
+  }
+}
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Safari only override */
-  /* line 45, ../scss/_style.scss */
+  /* line 97, ../scss/_style.scss */
   ::i-block-chrome, .circles div {
     height: 98.8%;
     width: 98.8%;
@@ -163,752 +196,35 @@ body {
     left: 1.2%;
   }
 }
-/* line 53, ../scss/_style.scss */
-.work {
-  position: fixed;
-  right: 10%;
-  top: 10%;
-  height: 9rem;
-  overflow-y: hidden;
-  transition: all .3s;
-  /**/
-  display: none;
-}
-
-/* line 64, ../scss/_style.scss */
-.work:hover {
-  cursor: pointer;
-  height: 25rem;
-  transition: opacity .3s;
-}
-
-/* line 70, ../scss/_style.scss */
-.work:hover .links a {
-  opacity: 1;
-  transition: all .3s;
-}
-
-/* line 75, ../scss/_style.scss */
-.title {
-  width: 18rem;
-  margin-bottom: 3rem;
-}
-
-/* line 80, ../scss/_style.scss */
-.title div {
-  background: rgba(42, 192, 240, 0.5);
-  width: 10px;
-  height: 10px;
-  float: left;
-  position: absolute;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-/* line 90, ../scss/_style.scss */
-.title:hover div {
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-/* line 95, ../scss/_style.scss */
-.title:hover + .links a {
-  opacity: 1.0;
-}
-
-/* line 99, ../scss/_style.scss */
-.links {
-  margin-top: 80px;
-}
-
-/* line 103, ../scss/_style.scss */
-.links a, .links a:visited {
-  display: block;
-  font-family: "Jura", sans-serif;
-  color: #aaa;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 1.6rem;
-  opacity: 0;
-  transition: all .3s;
-}
-
-/* line 114, ../scss/_style.scss */
-.links a:hover, .links a:active {
-  color: #333;
-}
-
-/* positioning */
-/* line 120, ../scss/_style.scss */
-.title div:nth-of-type(1) {
-  left: 40px;
-}
-
-/* line 125, ../scss/_style.scss */
-.title div:nth-of-type(2) {
-  left: 50px;
-}
-
-/* line 129, ../scss/_style.scss */
-.title div:nth-of-type(3) {
-  top: 10px;
-  left: 30px;
-}
-
-/* line 134, ../scss/_style.scss */
-.title div:nth-of-type(4) {
-  top: 10px;
-  left: 40px;
-}
-
-/* line 139, ../scss/_style.scss */
-.title div:nth-of-type(5) {
-  top: 10px;
-  left: 50px;
-}
-
-/* line 144, ../scss/_style.scss */
-.title div:nth-of-type(6) {
-  top: 10px;
-  left: 60px;
-}
-
-/* line 149, ../scss/_style.scss */
-.title div:nth-of-type(7) {
-  top: 20px;
-  left: 20px;
-}
-
-/* line 154, ../scss/_style.scss */
-.title div:nth-of-type(8) {
-  top: 20px;
-  left: 30px;
-}
-
-/* line 159, ../scss/_style.scss */
-.title div:nth-of-type(9) {
-  top: 20px;
-  left: 40px;
-}
-
-/* line 164, ../scss/_style.scss */
-.title div:nth-of-type(10) {
-  top: 20px;
-  left: 50px;
-}
-
-/* line 169, ../scss/_style.scss */
-.title div:nth-of-type(11) {
-  top: 20px;
-  left: 60px;
-}
-
-/* line 174, ../scss/_style.scss */
-.title div:nth-of-type(12) {
-  top: 20px;
-  left: 70px;
-}
-
-/* line 179, ../scss/_style.scss */
-.title div:nth-of-type(13) {
-  top: 30px;
-  left: 10px;
-}
-
-/* line 184, ../scss/_style.scss */
-.title div:nth-of-type(14) {
-  top: 30px;
-  left: 20px;
-}
-
-/* line 189, ../scss/_style.scss */
-.title div:nth-of-type(15) {
-  top: 30px;
-  left: 30px;
-}
-
-/* line 194, ../scss/_style.scss */
-.title div:nth-of-type(16) {
-  top: 30px;
-  left: 40px;
-}
-
-/* line 199, ../scss/_style.scss */
-.title div:nth-of-type(17) {
-  top: 30px;
-  left: 50px;
-}
-
-/* line 204, ../scss/_style.scss */
-.title div:nth-of-type(18) {
-  top: 30px;
-  left: 60px;
-}
-
-/* line 209, ../scss/_style.scss */
-.title div:nth-of-type(19) {
-  top: 30px;
-  left: 70px;
-}
-
-/* line 214, ../scss/_style.scss */
-.title div:nth-of-type(20) {
-  top: 30px;
-  left: 80px;
-}
-
-/* line 219, ../scss/_style.scss */
-.title div:nth-of-type(21) {
-  top: 40px;
-  left: 0;
-}
-
-/* line 224, ../scss/_style.scss */
-.title div:nth-of-type(22) {
-  top: 40px;
-  left: 10px;
-}
-
-/* line 229, ../scss/_style.scss */
-.title div:nth-of-type(23) {
-  top: 40px;
-  left: 20px;
-}
-
-/* line 234, ../scss/_style.scss */
-.title div:nth-of-type(24) {
-  top: 40px;
-  left: 30px;
-}
-
-/* line 239, ../scss/_style.scss */
-.title div:nth-of-type(25) {
-  top: 40px;
-  left: 40px;
-}
-
-/* line 244, ../scss/_style.scss */
-.title div:nth-of-type(26) {
-  top: 40px;
-  left: 50px;
-}
-
-/* line 249, ../scss/_style.scss */
-.title div:nth-of-type(27) {
-  top: 40px;
-  left: 60px;
-}
-
-/* line 254, ../scss/_style.scss */
-.title div:nth-of-type(28) {
-  top: 40px;
-  left: 70px;
-}
-
-/* line 259, ../scss/_style.scss */
-.title div:nth-of-type(29) {
-  top: 40px;
-  left: 80px;
-}
-
-/* line 264, ../scss/_style.scss */
-.title div:nth-of-type(30) {
-  top: 40px;
-  left: 90px;
-}
-
-/* line 269, ../scss/_style.scss */
-.title div:nth-of-type(31) {
-  top: 50px;
-  left: 10px;
-}
-
-/* line 274, ../scss/_style.scss */
-.title div:nth-of-type(32) {
-  top: 50px;
-  left: 20px;
-}
-
-/* line 279, ../scss/_style.scss */
-.title div:nth-of-type(33) {
-  top: 50px;
-  left: 30px;
-}
-
-/* line 284, ../scss/_style.scss */
-.title div:nth-of-type(34) {
-  top: 50px;
-  left: 40px;
-}
-
-/* line 289, ../scss/_style.scss */
-.title div:nth-of-type(35) {
-  top: 50px;
-  left: 50px;
-}
-
-/* line 294, ../scss/_style.scss */
-.title div:nth-of-type(36) {
-  top: 50px;
-  left: 60px;
-}
-
-/* line 299, ../scss/_style.scss */
-.title div:nth-of-type(37) {
-  top: 50px;
-  left: 70px;
-}
-
-/* line 304, ../scss/_style.scss */
-.title div:nth-of-type(38) {
-  top: 50px;
-  left: 80px;
-}
-
-/* line 309, ../scss/_style.scss */
-.title div:nth-of-type(39) {
-  top: 60px;
-  left: 20px;
-}
-
-/* line 314, ../scss/_style.scss */
-.title div:nth-of-type(40) {
-  top: 60px;
-  left: 30px;
-}
-
-/* line 319, ../scss/_style.scss */
-.title div:nth-of-type(41) {
-  top: 60px;
-  left: 40px;
-}
-
-/* line 324, ../scss/_style.scss */
-.title div:nth-of-type(42) {
-  top: 60px;
-  left: 50px;
-}
-
-/* line 329, ../scss/_style.scss */
-.title div:nth-of-type(43) {
-  top: 60px;
-  left: 60px;
-}
-
-/* line 334, ../scss/_style.scss */
-.title div:nth-of-type(44) {
-  top: 60px;
-  left: 70px;
-}
-
-/* line 339, ../scss/_style.scss */
-.title div:nth-of-type(45) {
-  top: 70px;
-  left: 30px;
-}
-
-/* line 344, ../scss/_style.scss */
-.title div:nth-of-type(46) {
-  top: 70px;
-  left: 40px;
-}
-
-/* line 349, ../scss/_style.scss */
-.title div:nth-of-type(47) {
-  top: 70px;
-  left: 50px;
-}
-
-/* line 354, ../scss/_style.scss */
-.title div:nth-of-type(48) {
-  top: 70px;
-  left: 60px;
-}
-
-/* line 359, ../scss/_style.scss */
-.title div:nth-of-type(49) {
-  top: 80px;
-  left: 40px;
-}
-
-/* line 364, ../scss/_style.scss */
-.title div:nth-of-type(50) {
-  top: 80px;
-  left: 50px;
-}
-
-/* line 370, ../scss/_style.scss */
-.title div:nth-of-type(51) {
-  opacity: 0;
-}
-
-/* line 374, ../scss/_style.scss */
-.title div:nth-of-type(52) {
-  opacity: 0;
-}
-
-/* line 378, ../scss/_style.scss */
-.title div:nth-of-type(53) {
-  opacity: 0;
-}
-
-/* line 382, ../scss/_style.scss */
-.title div:nth-of-type(54) {
-  opacity: 0;
-}
-
-/* hover state */
-/* line 389, ../scss/_style.scss */
-.work:hover div:nth-of-type(2) {
-  left: 0;
-  top: 10px;
-}
-
-/* line 394, ../scss/_style.scss */
-.work:hover div:nth-of-type(3) {
-  top: 20px;
-  left: 0;
-}
-
-/* line 399, ../scss/_style.scss */
-.work:hover div:nth-of-type(4) {
-  top: 30px;
-  left: 10px;
-}
-
-/* line 404, ../scss/_style.scss */
-.work:hover div:nth-of-type(5) {
-  top: 20px;
-  left: 20px;
-}
-
-/* line 409, ../scss/_style.scss */
-.work:hover div:nth-of-type(6) {
-  top: 30px;
-  left: 30px;
-}
-
-/* line 414, ../scss/_style.scss */
-.work:hover div:nth-of-type(7) {
-  top: 20px;
-  left: 40px;
-}
-
-/* line 419, ../scss/_style.scss */
-.work:hover div:nth-of-type(8) {
-  top: 10px;
-  left: 40px;
-}
-
-/* line 424, ../scss/_style.scss */
-.work:hover div:nth-of-type(9) {
-  top: 0;
-  left: 0;
-}
-
-/* line 429, ../scss/_style.scss */
-.work:hover div:nth-of-type(10) {
-  top: 0;
-  left: 60px;
-}
-
-/* line 434, ../scss/_style.scss */
-.work:hover div:nth-of-type(11) {
-  top: 10px;
-  left: 60px;
-}
-
-/* line 439, ../scss/_style.scss */
-.work:hover div:nth-of-type(12) {
-  top: 20px;
-  left: 60px;
-}
-
-/* line 444, ../scss/_style.scss */
-.work:hover div:nth-of-type(13) {
-  top: 30px;
-  left: 60px;
-}
-
-/* line 449, ../scss/_style.scss */
-.work:hover div:nth-of-type(13) {
-  top: 30px;
-  left: 60px;
-}
-
-/* line 454, ../scss/_style.scss */
-.work:hover div:nth-of-type(14) {
-  top: 30px;
-  left: 70px;
-}
-
-/* line 459, ../scss/_style.scss */
-.work:hover div:nth-of-type(15) {
-  top: 30px;
-  left: 80px;
-}
-
-/* line 464, ../scss/_style.scss */
-.work:hover div:nth-of-type(16) {
-  top: 20px;
-  left: 80px;
-}
-
-/* line 469, ../scss/_style.scss */
-.work:hover div:nth-of-type(17) {
-  top: 10px;
-  left: 80px;
-}
-
-/* line 474, ../scss/_style.scss */
-.work:hover div:nth-of-type(18) {
-  top: 0;
-  left: 80px;
-}
-
-/* line 479, ../scss/_style.scss */
-.work:hover div:nth-of-type(19) {
-  top: 0;
-  left: 70px;
-}
-
-/* line 484, ../scss/_style.scss */
-.work:hover div:nth-of-type(20) {
-  top: 0;
-  left: 100px;
-}
-
-/* line 489, ../scss/_style.scss */
-.work:hover div:nth-of-type(21) {
-  top: 10px;
-  left: 100px;
-}
-
-/* line 494, ../scss/_style.scss */
-.work:hover div:nth-of-type(22) {
-  top: 20px;
-  left: 100px;
-}
-
-/* line 499, ../scss/_style.scss */
-.work:hover div:nth-of-type(23) {
-  top: 30px;
-  left: 100px;
-}
-
-/* line 504, ../scss/_style.scss */
-.work:hover div:nth-of-type(24) {
-  top: 0;
-  left: 110px;
-}
-
-/* line 509, ../scss/_style.scss */
-.work:hover div:nth-of-type(25) {
-  top: 10px;
-  left: 120px;
-}
-
-/* line 514, ../scss/_style.scss */
-.work:hover div:nth-of-type(26) {
-  top: 20px;
-  left: 110px;
-}
-
-/* line 519, ../scss/_style.scss */
-.work:hover div:nth-of-type(27) {
-  top: 30px;
-  left: 120px;
-}
-
-/* line 524, ../scss/_style.scss */
-.work:hover div:nth-of-type(28) {
-  top: 0;
-  left: 140px;
-}
-
-/* line 529, ../scss/_style.scss */
-.work:hover div:nth-of-type(29) {
-  top: 10px;
-  left: 140px;
-}
-
-/* line 534, ../scss/_style.scss */
-.work:hover div:nth-of-type(30) {
-  top: 20px;
-  left: 140px;
-}
-
-/* line 539, ../scss/_style.scss */
-.work:hover div:nth-of-type(31) {
-  top: 30px;
-  left: 140px;
-}
-
-/* line 544, ../scss/_style.scss */
-.work:hover div:nth-of-type(32) {
-  top: 0;
-  left: 160px;
-}
-
-/* line 549, ../scss/_style.scss */
-.work:hover div:nth-of-type(33) {
-  top: 10px;
-  left: 150px;
-}
-
-/* line 554, ../scss/_style.scss */
-.work:hover div:nth-of-type(34) {
-  top: 20px;
-  left: 150px;
-}
-
-/* line 559, ../scss/_style.scss */
-.work:hover div:nth-of-type(35) {
-  top: 30px;
-  left: 160px;
-}
-
-/* line 564, ../scss/_style.scss */
-.work:hover div:nth-of-type(36) {
-  left: 0;
-  top: 50px;
-  opacity: 0;
-  -webkit-transition: .1s;
-  transition: .1s;
-}
-
-/* line 572, ../scss/_style.scss */
-.work:hover div:nth-of-type(37), .work:hover div:nth-of-type(38), .work:hover div:nth-of-type(39),
-.work:hover div:nth-of-type(40), .work:hover div:nth-of-type(41), .work:hover div:nth-of-type(42),
-.work:hover div:nth-of-type(43), .work:hover div:nth-of-type(44), .work:hover div:nth-of-type(45),
-.work:hover div:nth-of-type(46), .work:hover div:nth-of-type(47), .work:hover div:nth-of-type(48),
-.work:hover div:nth-of-type(49), .work:hover div:nth-of-type(50), .work:hover div:nth-of-type(51),
-.work:hover div:nth-of-type(52), .work:hover div:nth-of-type(53) {
-  top: 50px;
-}
-
-/* line 581, ../scss/_style.scss */
-.work:hover div:nth-of-type(38) {
-  left: 10px;
-}
-
-/* line 585, ../scss/_style.scss */
-.work:hover div:nth-of-type(39) {
-  left: 20px;
-}
-
-/* line 589, ../scss/_style.scss */
-.work:hover div:nth-of-type(40) {
-  left: 30px;
-}
-
-/* line 593, ../scss/_style.scss */
-.work:hover div:nth-of-type(41) {
-  left: 40px;
-}
-
-/* line 597, ../scss/_style.scss */
-.work:hover div:nth-of-type(42) {
-  left: 50px;
-}
-
-/* line 601, ../scss/_style.scss */
-.work:hover div:nth-of-type(43) {
-  left: 60px;
-}
-
-/* line 605, ../scss/_style.scss */
-.work:hover div:nth-of-type(44) {
-  left: 0;
-}
-
-/* line 609, ../scss/_style.scss */
-.work:hover div:nth-of-type(45) {
-  left: 80px;
-}
-
-/* line 613, ../scss/_style.scss */
-.work:hover div:nth-of-type(46) {
-  left: 90px;
-}
-
-/* line 617, ../scss/_style.scss */
-.work:hover div:nth-of-type(47) {
-  left: 100px;
-}
-
-/* line 621, ../scss/_style.scss */
-.work:hover div:nth-of-type(48) {
-  left: 110px;
-}
-
-/* line 625, ../scss/_style.scss */
-.work:hover div:nth-of-type(49) {
-  left: 120px;
-}
-
-/* line 629, ../scss/_style.scss */
-.work:hover div:nth-of-type(50) {
-  left: 130px;
-}
-
-/* line 633, ../scss/_style.scss */
-.work:hover div:nth-of-type(51) {
-  left: 140px;
-  opacity: 1;
-}
-
-/* line 638, ../scss/_style.scss */
-.work:hover div:nth-of-type(52) {
-  left: 150px;
-  opacity: 1;
-}
-
-/* line 643, ../scss/_style.scss */
-.work:hover div:nth-of-type(53) {
-  left: 160px;
-  opacity: 1;
-}
-
-/* line 648, ../scss/_style.scss */
-.work:hover div:nth-of-type(54) {
-  opacity: 0;
-  -webkit-transition: all .1s;
-  transition: all .1s;
-}
-
-/* media queries
-================================================== */
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 960px) and (max-width: 1160px) {
-  /* line 663, ../scss/_style.scss */
+@media only screen and (max-width: 1160px) {
+  /* line 109, ../scss/_style.scss */
   .work {
     right: 5%;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 960px) {
-  /* line 670, ../scss/_style.scss */
+@media only screen and (max-width: 960px) {
+  /* line 116, ../scss/_style.scss */
   .work {
     right: 0;
     top: initial;
     left: 10%;
     bottom: 0;
-    height: 250px;
+    height: 25rem;
   }
 
-  /* line 678, ../scss/_style.scss */
+  /* line 124, ../scss/_style.scss */
   .circles {
-    width: 400px;
-    height: 400px;
+    width: 40rem;
+    height: 40rem;
   }
 
-  /* line 683, ../scss/_style.scss */
+  /* line 129, ../scss/_style.scss */
   .circles div {
     top: .6%;
     left: .6%;
   }
 
-  /* line 688, ../scss/_style.scss */
+  /* line 134, ../scss/_style.scss */
   ::i-block-chrome, .circles div {
     height: 99%;
     width: 99%;
@@ -916,29 +232,26 @@ body {
     left: 1%;
   }
 }
-/* All Mobile Sizes (devices and browser) */
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
-  /* line 707, ../scss/_style.scss */
+  /* line 146, ../scss/_style.scss */
   .circles {
-    width: 300px;
-    height: 300px;
+    width: 30rem;
+    height: 30rem;
   }
 
-  /* line 712, ../scss/_style.scss */
+  /* line 151, ../scss/_style.scss */
   .circles div {
     top: 0.5%;
     left: 0.45%;
   }
 
-  /* line 717, ../scss/_style.scss */
+  /* line 156, ../scss/_style.scss */
   .work {
-    top: 360px;
+    top: 36rem;
     width: 55%;
   }
 
-  /* line 722, ../scss/_style.scss */
+  /* line 161, ../scss/_style.scss */
   ::i-block-chrome, .circles div {
     height: 99%;
     width: 99%;
@@ -946,5 +259,3 @@ body {
     left: 1%;
   }
 }
-/* font-face
-================================================== */
