@@ -1,0 +1,46 @@
+// _circles.scss
+$circle-base: 40vw;
+$circle-count: 69;
+
+.circles-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: $circle-base;
+  height: $circle-base;
+  padding: 0;
+}
+
+.circles {
+  width: 100%;
+  height: 100%;
+  background: $cream;
+  position: relative;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(0.5%) translateY(0.5%);
+    border-radius: 50%;
+    border: 0.1rem solid;
+    border-color:  $blue;
+  }
+}
+
+@for $i from 1 through $circle-count {
+  $z-base: 1;
+  $mod1: .66;
+  $mod2: .72;
+
+  .circles div:nth-of-type(#{$i}) {
+    top: $mod1 * 1% * $i;
+    left: $mod1 * 1% * $i;
+    width: 100% - ($mod2 * $i);
+    height: 100% - ($mod2 * $i);
+    z-index: $z-base + $i;
+  }
+}
