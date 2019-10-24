@@ -1,5 +1,5 @@
 <template>
-  <Circles></Circles>
+  <Circles />
 </template>
 
 <script>

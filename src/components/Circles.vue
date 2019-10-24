@@ -1,7 +1,7 @@
 <template>
   <section class="circles-wrapper">
     <div class="circles">
-      <div v-for="n in 69" :key="n"></div>
+      <div v-for="i in 69" :key="i"></div>
     </div>
   </section>
 </template>

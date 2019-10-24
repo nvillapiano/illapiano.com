@@ -37,8 +37,8 @@ $circle-count: 69;
   $mod2: .72;
 
   .circles div:nth-of-type(#{$i}) {
-    top: $mod1 * 1% * $i;
-    left: $mod1 * 1% * $i;
+    top: 1% * $mod1 * $i;
+    left: 1% * $mod1 * $i;
     width: 100% - ($mod2 * $i);
     height: 100% - ($mod2 * $i);
     z-index: $z-base + $i;
