@@ -1,4 +1,6 @@
 # illapiano.com
+Personal site for Nick Villapiano. Currently a page of generative art created with Vue and Sass.
+
 
 ## Project setup
 ```

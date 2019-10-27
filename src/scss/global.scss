@@ -1,0 +1,35 @@
+/////////////////////
+////  Variables  ////
+/////////////////////
+
+
+// Colors
+$black: #000;
+$white: #fff;
+$cream: #fffffa;
+$blue: rgba(42, 192, 240, 0.2);
+// $blue: blue;
+
+
+
+/////////////////////////
+////  Global styles  ////
+/////////////////////////
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 62.5%; // 1rem = 10px;
+  background: $cream;
+  color: $blue;
+}
+
+
+////////////////////
+////  Partials  ////
+////////////////////
+
+@import './_circles';
