@@ -4,12 +4,12 @@
 
 <script>
 // @ is an alias to /src
-import Circles from '@/components/Circles.vue'
+import Circles from "@/components/Circles.vue";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    Circles
-  }
-}
+    Circles,
+  },
+};
 </script>
