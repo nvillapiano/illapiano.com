@@ -27,11 +27,11 @@ export default {
       console.log("|    ___||   | |       ||  _    ||  |_|  |");
       console.log("|   |    |   | |   _   || | |   ||       |");
       console.log("|___|    |___| |__| |__||_|  |__||_______|");
-      console.log("Let's make something cool");
-      console.log("--------------------------------");
+      console.log("Let's make something cool together");
       console.log("nickv@illapiano.com");
-      console.log("https://citymonsturz.netlify.app/");
+      console.log("--------------------------------");
       console.log("https://www.doitlewitt.com");
+      console.log("https://citymonsturz.netlify.app/");
     },
   },
   mounted() {
