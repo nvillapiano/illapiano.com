@@ -1,6 +1,6 @@
 // _circles.scss
 $circle-base: calc(25vw + 20rem);
-$circle-count: 69;
+$circle-count: 65;
 
 .circles-wrapper {
   position: absolute;
@@ -10,6 +10,46 @@ $circle-count: 69;
   width: $circle-base;
   height: $circle-base;
   padding: 0;
+
+  &.grey {
+
+    .circles {
+
+      div {
+        border-color: $grey;
+      }
+    }
+  }
+
+  &.blue {
+
+    .circles {
+
+      div {
+        border-color: $blue;
+      }
+    }
+  }
+
+  &.lavander {
+
+    .circles {
+
+      div {
+        border-color: $lavander;
+      }
+    }
+  }
+
+  &.orange {
+
+    .circles {
+
+      div {
+        border-color: $orange;
+      }
+    }
+  }
 }
 
 .circles {
@@ -17,6 +57,7 @@ $circle-count: 69;
   height: 100%;
   background: $cream;
   position: relative;
+  border-color: $blue !important;
 
   div {
     position: absolute;
@@ -27,7 +68,10 @@ $circle-count: 69;
     transform: translateX(0.5%) translateY(0.5%);
     border-radius: 50%;
     border: 0.1rem solid;
-    border-color: $blue;
+    // border-color: $blue;
+    border-color: inherit;
+    //
+    // transition: all 0.15s;
   }
 }
 
@@ -35,6 +79,22 @@ $circle-count: 69;
   $z-base: 1;
   $mod1: .66;
   $mod2: .72;
+  $h: 195 - ($i * 10);
+  $s: 87 + ($i * 10);
+  $l: 55 - ($i * 0.25);
+  $fade-color: hsla($h, $s, $l, 0.25);
+
+  @keyframes fadeColor-#{$i} {
+    0% {
+      border-color: $blue;
+    }
+    50% {
+      border-color: $fade-color;
+    }
+    100% {
+      border-color: $blue;
+    }
+  }
 
   .circles div:nth-of-type(#{$i}) {
     top: 1% * $mod1 * $i;
@@ -42,5 +102,10 @@ $circle-count: 69;
     width: 100% - ($mod2 * $i);
     height: 100% - ($mod2 * $i);
     z-index: $z-base + $i;
+
+    &.grey {
+      animation-name: fadeColor-#{$i};
+      animation-duration: 0.3s;
+    }
   }
 }
