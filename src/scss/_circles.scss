@@ -68,19 +68,23 @@ $circle-count: 65;
     transform: translateX(0.5%) translateY(0.5%);
     border-radius: 50%;
     border: 0.1rem solid;
-    // border-color: $blue;
     border-color: inherit;
-    //
-    // transition: all 0.15s;
+    transition: all 0.3s;
+
+    // messing around with shapes
+    // border-radius: 0;
+    cursor: crosshair;
   }
 }
 
 @for $i from 1 through $circle-count {
   $z-base: 1;
+  $mod1: .55;
   $mod1: .66;
+  $mod2: .5;
   $mod2: .72;
   $h: 195 - ($i * 10);
-  $s: 87 + ($i * 10);
+  $s: 87 + ($i * 5);
   $l: 55 - ($i * 0.25);
   $fade-color: hsla($h, $s, $l, 0.25);
 
@@ -106,6 +110,7 @@ $circle-count: 65;
     &.grey {
       animation-name: fadeColor-#{$i};
       animation-duration: 0.3s;
+      border: 1rem solid;
     }
   }
 }
