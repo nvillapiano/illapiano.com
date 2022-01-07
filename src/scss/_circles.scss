@@ -86,7 +86,7 @@ $circle-count: 65;
   $h: 195 - ($i * 10);
   $s: 87 + ($i * 5);
   $l: 55 - ($i * 0.25);
-  $fade-color: hsla($h, $s, $l, 0.25);
+  $fade-color: hsla($h, $s, $l, .5);
 
   @keyframes fadeColor-#{$i} {
     0% {
@@ -110,7 +110,7 @@ $circle-count: 65;
     &.grey {
       animation-name: fadeColor-#{$i};
       animation-duration: 0.3s;
-      border: 1rem solid;
+      border: 2rem solid;
     }
   }
 }
