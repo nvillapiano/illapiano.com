@@ -10,6 +10,46 @@ $circle-count: 69;
   width: $circle-base;
   height: $circle-base;
   padding: 0;
+
+  &.grey {
+
+    .circles {
+
+      div {
+        border-color: $grey;
+      }
+    }
+  }
+
+  &.blue {
+
+    .circles {
+
+      div {
+        border-color: $blue;
+      }
+    }
+  }
+
+  &.lavander {
+
+    .circles {
+
+      div {
+        border-color: $lavander;
+      }
+    }
+  }
+
+  &.orange {
+
+    .circles {
+
+      div {
+        border-color: $orange;
+      }
+    }
+  }
 }
 
 .circles {
@@ -17,6 +57,7 @@ $circle-count: 69;
   height: 100%;
   background: $cream;
   position: relative;
+  border-color: $blue !important;
 
   div {
     position: absolute;
@@ -27,20 +68,94 @@ $circle-count: 69;
     transform: translateX(0.5%) translateY(0.5%);
     border-radius: 50%;
     border: 0.1rem solid;
-    border-color:  $blue;
+    border-color: inherit;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  &.square {
+
+    div {
+      border-radius: 0;
+    }
+  }
+
+  &.square2 {
+
+    div {
+      border-radius: 0;
+    }
   }
 }
 
 @for $i from 1 through $circle-count {
   $z-base: 1;
+  $mod1: .55;
   $mod1: .66;
+  $mod2: .5;
   $mod2: .72;
+  $h: 195 - ($i * 10);
+  $s: 87 + ($i * 5);
+  $l: 55 - ($i * 0.25);
+  $fade-color: hsla($h, $s, $l, .5);
+
+  @keyframes fadeColor-#{$i} {
+    0% {
+      border-color: $blue;
+      border-width: 0.1rem;
+    }
+    50% {
+      border-color: $fade-color;
+      border-width: 2rem;
+    }
+    100% {
+      border-color: $blue;
+      border-width: 0.1rem;
+    }
+  }
 
   .circles div:nth-of-type(#{$i}) {
-    top: 1% * $mod1 * $i;
-    left: 1% * $mod1 * $i;
-    width: 100% - ($mod2 * $i);
-    height: 100% - ($mod2 * $i);
-    z-index: $z-base + $i;
+
+    &.color {
+      animation-name: fadeColor-#{$i};
+      animation-duration: 0.3s;
+      border: 2rem solid;
+    }
+  }
+
+  .circles {
+
+    &.square {
+
+      div:nth-of-type(#{$i}) {
+        margin-top: $i * -0.05%;
+        margin-left: $i * -0.06%;
+      }
+    }
+
+    &.square2 {
+
+      div:nth-of-type(#{$i}) {
+        margin-top: $i * -0.45%;
+        margin-left: $i * -0.45%;
+      }
+    }
+
+    &.circle2 {
+
+      div:nth-of-type(#{$i}) {
+        margin-top: $i * -0.5%;
+        margin-left: $i * -0.475%;
+      }
+    }
+
+    &.burst {
+
+      div:nth-of-type(#{$i}) {
+        animation-name: fadeColor-#{$i};
+        animation-delay: $i * 0.0075s;
+        animation-duration: 0.3s;
+      }
+    }
   }
 }
